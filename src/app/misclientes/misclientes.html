@@ -1,0 +1,18 @@
+<section class="card">
+  <h2>Mis clientes</h2>
+
+  <form (ngSubmit)="addCliente()" class="form-grid">
+    <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Nombre" />
+    <input type="text" name="direccion" [(ngModel)]="direccion" placeholder="Dirección" />
+    <button type="submit">Añadir</button>
+  </form>
+
+  <ul class="list">
+    @for (c of clientes; track c; let i = $index) {
+      <li class="list-item">
+        <span><strong>{{ c.nombre }}</strong> — {{ c.direccion }}</span>
+        <button type="button" class="danger" (click)="deleteCliente(i)">Borrar</button>
+      </li>
+    }
+  </ul>
+</section>

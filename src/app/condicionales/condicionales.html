@@ -1,0 +1,13 @@
+<section class="card">
+  <h2>Condicionales</h2>
+
+  <button type="button" (click)="toggle()">
+    {{ mostrar ? 'Ocultar' : 'Mostrar' }} contenido
+  </button>
+
+  @if (mostrar) {
+    <div class="box">
+      <p>Este contenido solo aparece si la variable booleana es true.</p>
+    </div>
+  }
+</section>

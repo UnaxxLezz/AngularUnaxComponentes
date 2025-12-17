@@ -1,0 +1,24 @@
+<section class="card">
+  <h2>Listado</h2>
+
+  <form (ngSubmit)="addItem()" class="form-row">
+    <input
+      type="text"
+      name="nuevoItem"
+      [(ngModel)]="nuevoItem"
+      placeholder="Nuevo elemento..."
+    />
+    <button type="submit">Añadir</button>
+  </form>
+
+  <ul class="list">
+    @for (it of items; track it; let i = $index) {
+      <li class="list-item">
+        <span>{{ it }}</span>
+        <button type="button" class="danger" (click)="deleteItem(i)">
+          Borrar
+        </button>
+      </li>
+    }
+  </ul>
+</section>
