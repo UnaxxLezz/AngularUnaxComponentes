@@ -48,8 +48,12 @@
   background: linear-gradient(180deg, var(--panel), rgba(255, 255, 255, 0.04));
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
+
 }
 
+.header > h1 {
+  color: white;
+}
 .angular-logo {
   width: 64px;
   height: auto;
