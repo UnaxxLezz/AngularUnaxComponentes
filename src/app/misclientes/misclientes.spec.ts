@@ -7,7 +7,7 @@ describe('MisclientesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MisclientesComponent], // standalone
+      imports: [MisclientesComponent], 
     }).compileComponents();
 
     fixture = TestBed.createComponent(MisclientesComponent);
