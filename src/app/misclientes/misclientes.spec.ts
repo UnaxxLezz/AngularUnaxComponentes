@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MisclientesComponent } from './misclientes';
 
-import { Misclientes } from './misclientes';
-
-describe('Misclientes', () => {
-  let component: Misclientes;
-  let fixture: ComponentFixture<Misclientes>;
+describe('MisclientesComponent', () => {
+  let component: MisclientesComponent;
+  let fixture: ComponentFixture<MisclientesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Misclientes]
-    })
-    .compileComponents();
+      imports: [MisclientesComponent], // standalone
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(Misclientes);
+    fixture = TestBed.createComponent(MisclientesComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
